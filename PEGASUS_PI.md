@@ -8,7 +8,7 @@
 
 ### UDP目录
 
-![image-20230724134749233](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724134749233.png)
+![image-20230724134749233](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724134749233.png)
 
 #### XX.c文件
 
@@ -27,7 +27,6 @@ sources中包含需要执行的源文件。
 include_dirs包含了源文件所使用到的库函数地址。
 
 ```gn
-
 static_library("udp") { 		# 项目名称，即后一个udp
     sources = [
         "pegasus_server.c", 	# 需要执行的源文件
@@ -56,7 +55,7 @@ static_library("udp") { 		# 项目名称，即后一个udp
 
 ### app目录
 
-![image-20230724134726859](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724134726859.png)
+![image-20230724134726859](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724134726859.png)
 
 #### udp项目
 
@@ -131,7 +130,7 @@ lite_component("app") {
 
 pegasus_server.c代码中WifiConnect代码中可以设置当前的热点SSID和密码，修改即可。
 
-![image-20230724140956707](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724140956707.png)
+![image-20230724140956707](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724140956707.png)
 
 #### pegasus_server.c端口、服务器ip设置
 
@@ -143,7 +142,7 @@ serverC_ip代表了树莓派的ip地址，根据实际情况修改即可。
 
 serverC_port代表了树莓派的接收端口，一般不用调整。
 
-![image-20230724141134321](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724141134321.png)
+![image-20230724141134321](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724141134321.png)
 
 #### pegasus_button.c端口、ip设置
 
@@ -151,7 +150,7 @@ SERVER_IP填树莓派ip。
 
 SERVER_PORT不用调整。
 
-![image-20230724141656550](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724141656550.png)
+![image-20230724141656550](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724141656550.png)
 
 ### 代码编译、烧写
 
@@ -165,17 +164,17 @@ SERVER_PORT不用调整。
 
 编译需要该插件，直接点击Rebuild，开始编译代码为二进制文件。当编译完成后，执行烧写，将二进制文件部署到开发板上。
 
-![image-20230724164915576](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724164915576.png)
+![image-20230724164915576](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724164915576.png)
 
 #### 烧写代码
 
 烧写代码至P板之前，先确定P板是否连接到电脑端，同时串口工具Monitor是否关闭。
 
-![image-20230724165146063](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724165146063.png)
+![image-20230724165146063](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724165146063.png)
 
 如果已经关闭串口工具，并且连接到电脑后，就可以执行烧写命令Upload。
 
-![image-20230724165332980](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724165332980.png)
+![image-20230724165332980](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724165332980.png)
 
 Upload的刚开始，会提示要点击开发板上的reset按钮，点击即可。
 
@@ -209,7 +208,7 @@ Upload的刚开始，会提示要点击开发板上的reset按钮，点击即可
 
 通过函数调用到src中的wifi_connect.c文件来连接到当前的热点。
 
-![image-20230724142314173](C:\Users\meijiaming\AppData\Roaming\Typora\typora-user-images\image-20230724142314173.png)
+![image-20230724142314173](https://raw.githubusercontent.com/your-xunzong/pegasus_pi/master/imgs/image-20230724142314173.png)
 
 #### 接受来自T板的方向指令
 
